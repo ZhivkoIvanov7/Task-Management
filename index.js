@@ -92,7 +92,7 @@ while (true) {
             findTask(args[0])
             break;
         case 'remove_task':
-            removeTask(parseInt(args[0]) - 1);
+            removeTask(Number(args[0]) -1);
             break;
         case 'exit':
             console.log('Bye!')
