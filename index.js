@@ -50,8 +50,10 @@ function listTasks() {
 }
 
 function findTask(partialName) {
-    const matchingTasks = tasks.filter(task =>
+    let matchingTasks = tasks.filter(task =>
         task.name.toLowerCase().includes(partialName.toLowerCase()));
+
+    console.log(`Found ${matchingTasks.length} task(s):`);
 
     matchingTasks.forEach(task => {
         console.log(`${task.name} - ${task.date} ${task.time}`);
